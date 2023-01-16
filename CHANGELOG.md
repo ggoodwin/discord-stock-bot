@@ -13,8 +13,7 @@ and this project adheres to [Semantic Versioning].
 
 ### Added
 
-- `PriceAndPercentage` function to look up a specific stock and return the price and percentage change that day if the market is open.
-- `IsMarketOpen` function to check if the market is open or closed.
+- Core Functionality
 
 ### Changed
 
