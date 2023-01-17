@@ -9,6 +9,22 @@ and this project adheres to [Semantic Versioning].
 
 - Will list future updates here
 
+## [0.0.2] - 2023-01-16
+
+### Added
+
+### Changed
+
+- Display of bot status
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
 ## [0.0.1] - 2023-01-16
 
 ### Added

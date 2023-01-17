@@ -94,17 +94,17 @@ func Start() {
 	for range ticker {
 
 		if stocks.IsHoliday() {
-			statusMessage := fmt.Sprintf("$%s | Holiday", LastPrice)
+			statusMessage := fmt.Sprintf("%s | Holiday", LastPrice)
 			goBot.UpdateGameStatus(0, statusMessage)
 		} else {
 			if stocks.IsEarlyClose() && !stocks.IsMarketOpen() {
-				statusMessage := fmt.Sprintf("$%s | Early Close", LastPrice)
+				statusMessage := fmt.Sprintf("%s | Early Close", LastPrice)
 				goBot.UpdateGameStatus(0, statusMessage)
 			} else {
 				if stocks.IsMarketOpen() {
 					goBot.UpdateGameStatus(0, createMessage())
 				} else {
-					statusMessage := fmt.Sprintf("$%s | Market Closed", LastPrice)
+					statusMessage := fmt.Sprintf("%s | Market Closed", LastPrice)
 					goBot.UpdateGameStatus(0, statusMessage)
 				}
 			}
@@ -118,7 +118,7 @@ func Start() {
 func createMessage() string {
 	price, percent, direction := stocks.GetPriceAndPercentage(StockTicker)
 	LastPrice = price
-	return fmt.Sprintf("$%s%s %s%%", price, direction, percent)
+	return fmt.Sprintf("%s %s %s", price, direction, percent)
 }
 
 /**
